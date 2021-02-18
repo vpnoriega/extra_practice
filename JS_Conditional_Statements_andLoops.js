@@ -46,4 +46,24 @@ for (var i = 0; i <= 15; i++) {
 
 // 6.  Write a JavaScript program which compute, the average marks of the following students Then, this average is used to determine the corresponding grade.
 
+var students = [['David', 80],['Vinoth', 77], ['Divya', 88],['Ishitha', 95],['Thomas', 68]];
+var avgGrade = 0;
+for (var i=0; i <students.length; i++){ //why are they using .lenght? to only add the number values?
+    avgGrade = avgGrade + students[i][1]; //not really sure what this line means
+    var avg = (avgGrade/students.length);
+}
 
+console.log('Average grade: ' + (avgGrade)/students.length);
+if (avg < 60){
+    console.log ('Grade: F');
+} else if (avg < 70){
+    console.log ('Grade: D');
+} else if (avg < 80){
+    console.log ('Grade: C');
+} else if (avg < 90){
+    console.log ('Grade: B');
+} else if (avg < 100) {
+    console.log('Grade: A');
+}
+
+// 7. Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".

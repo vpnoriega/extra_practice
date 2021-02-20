@@ -121,3 +121,38 @@ while (cnt-- > 0) {
     num++;
 }
 console.log('first 5 happy numbers are: ' + f5);
+
+// Problem 9:
+/*Write a JavaScript program to find the armstrong numbers of 3 digits. Go to the editor
+Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.*/
+
+function armstrongNumber(){
+    for (var i = 1; i<10; ++i) {
+        for (var j = 0; j<10; ++j) {
+            for (var k = 0; k < 10; ++k) { //I don't understand what the for loops within for loops is doing
+                var pow =(Math.pow(i,3) + Math.pow(j,3) + Math.pow(k,3));
+                var plus = (i*100 + j*10 + k);
+                if (pow === plus){
+                    console.log(pow);
+                }
+            }
+        }
+    }
+}
+armstrongNumber();
+
+// Problem 10: Write a JavaScript program to construct the following pattern, using a nested for loop
+//*
+//**
+//***
+//****
+//*****
+
+var x,y,z;
+for (var x=1; x<=6; x++){ //outerloop prints number of rows
+    for (var y=1; y<x; y++){ //innerloop prints number of times to repeat the character
+        z=z+('*'); // don't understand why this is up here if definition of 'z' is below the console log
+    }
+    console.log(z);
+    z='';
+}

@@ -122,8 +122,7 @@ while (cnt-- > 0) {
 }
 console.log('first 5 happy numbers are: ' + f5);
 
-// Problem 9:
-/*Write a JavaScript program to find the armstrong numbers of 3 digits. Go to the editor
+/* Problem 9: Write a JavaScript program to find the armstrong numbers of 3 digits. Go to the editor
 Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.*/
 
 function armstrongNumber(){
@@ -141,12 +140,12 @@ function armstrongNumber(){
 }
 armstrongNumber();
 
-// Problem 10: Write a JavaScript program to construct the following pattern, using a nested for loop:
-//*
-//**
-//***
-//****
-//*****
+/* Problem 10: Write a JavaScript program to construct the following pattern, using a nested for loop:
+*
+**
+***
+****
+***** */
 
 var x,y,z;
 for (var x=1; x<=6; x++){ //outerloop prints number of rows
@@ -157,7 +156,7 @@ for (var x=1; x<=6; x++){ //outerloop prints number of rows
     z='';
 }
 
-//Problem 11: Write a JavaScript program to compute the greatest common divisor (GCD) of two positive integers.
+/* Problem 11: Write a JavaScript program to compute the greatest common divisor (GCD) of two positive integers. */
 
 // why were these numbers picked? I thought there was a way to find the solution for any number
 // this problem has me confused
@@ -175,4 +174,14 @@ while (a != b) {
 gcd = a;
 console.log(gcd);
 
-// Problem 12:
+/* Problem 12:  Write a JavaScript program to sum the multiples of 3 and 5 under 1000 */
+// This one was tricky at first but after seeing the solution I was able to grasp the concept
+
+var sum = 0;
+for (var i = 0; i < 1000; i++){
+    if (i % 3 === 0 || i % 5 === 0)
+    {
+        sum += i;
+    }
+}
+console.log (sum);

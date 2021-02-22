@@ -141,7 +141,7 @@ function armstrongNumber(){
 }
 armstrongNumber();
 
-// Problem 10: Write a JavaScript program to construct the following pattern, using a nested for loop
+// Problem 10: Write a JavaScript program to construct the following pattern, using a nested for loop:
 //*
 //**
 //***
@@ -156,3 +156,23 @@ for (var x=1; x<=6; x++){ //outerloop prints number of rows
     console.log(z);
     z='';
 }
+
+//Problem 11: Write a JavaScript program to compute the greatest common divisor (GCD) of two positive integers.
+
+// why were these numbers picked? I thought there was a way to find the solution for any number
+// this problem has me confused
+
+var a = 2154;
+var b = 458;
+var gcd;
+while (a != b) {
+    if (a > b) {
+        a = a - b;
+    } else {
+        b = b - a;
+    }
+}
+gcd = a;
+console.log(gcd);
+
+// Problem 12:

@@ -209,8 +209,136 @@ console.log(isNegativeOdd(-1));
 
 // Exercise 20
 // Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
+
 function isNegativeEven (x){
     return x<0 && x%2 === 0;
 }
 console.log(isNegativeEven(-6))
+
+
+// Exercise 21
+// Write a function definition named half that takes in a number and returns half the provided number.
+
+function half (x){
+    return x/2;
+}
+console.log(half(10));
+
+
+// Exercise 22
+// Write a function definition named double that takes in a number and returns double the provided number.
+
+function double(x){
+    return x*2;
+}
+console.log(double(4));
+
+
+// Exercise 23
+// Write a function definition named triple that takes in a number and returns triple the provided number.
+
+function triple(x){
+    return x*3;
+}
+console.log(triple(4));
+
+
+// Exercise 24
+// Write a function definition named reverseSign that takes in a number and returns the provided number but with the sign reversed.
+
+function reverSign(x){
+    return x * -1;
+}
+console.log(reverSign(-8));
+
+
+// Exercise 25
+// Write a function definition named absoluteValue that takes in a number and returns the absolute value of the provided number
+
+function absoluteValue(x){
+    return Math.abs(6)
+}
+console.log(absoluteValue(6))
+
+
+// Exercise 26
+// Write a function definition named isMultipleOfThree that takes in a number and returns true or false if the number is evenly divisible by 3.
+
+function isMultipleOfThree(x){
+    return x % 3 === 0;
+}
+console.log(isMultipleOfThree(9));
+
+
+// Exercise 28
+// Write a function definition named isMultipleOfBothThreeAndFive that takes in a number and returns true or false if the number is evenly divisible by both 3 and 5.
+
+function isMultipleOfBothThreeAndFive(x){
+    return x % 3 === 0 && x % 5 === 0;
+}
+console.log(isMultipleOfBothThreeAndFive(15));
+
+
+// Exercise 29
+// Write a function definition named square that takes in a number and returns the number times itself.
+
+function square(x){
+    return x*x;
+}
+console.log(square(3));
+
+
+// Exercise 30
+// Write a function definition named add that takes in two numbers and returns the sum.
+
+function add(x,y){
+    return x+y;
+}
+console.log(add(5,10));
+
+
+// Exercise 31
+// Write a function definition named cube that takes in a number and returns the number times itself, times itself.
+
+function cube(x){
+    return Math.pow(x,3)
+}
+console.log(cube(2));
+
+
+// Exercise 33
+// Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
+
+function subtract(x,y){
+    return x-y;
+}
+console.log(subtract(6,2))
+
+
+// Exercise 34
+// Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
+
+function multiply(x,y){
+    return x*y;
+}
+console.log(multiply(6,7));
+
+
+// Exercise 35
+// Write a function definition named divide that takes in two numbers and returns the first argument divided by the second argument.
+
+function divide(x,y){
+    return x/y;
+}
+console.log(divide(10,2));
+
+
+// Exercise 36
+// Write a function definition named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
+
+function quotient(x,y){
+    return Math.floor(x/y);
+}
+console.log(quotient(12,3));
+
 

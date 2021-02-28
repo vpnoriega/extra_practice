@@ -75,3 +75,142 @@ console.log(fruits);
 var fruitsAndVeggies = vegetables.concat(fruits);
 console.log(fruitsAndVeggies);
 
+// This function generates a random number that is both positive and even
+function randomPositiveEvenNumber() {
+    var randomNumber = Math.ceil(Math.random() * 100) + 10;
+    if(randomNumber % 2 !== 0) {
+        return randomPositiveEvenNumber()
+    }
+
+    return randomNumber;
+}
+
+// this function generates a random number that is both positive and odd
+function randomPositiveOddNumber() {
+    var randomNumber = Math.ceil(Math.random() * 100) + 10;
+    if(randomNumber % 2 === 0) {
+        return randomPositiveOddNumber();
+    }
+
+    return randomNumber;
+}
+
+// this function generates a random number that is both negative and even.
+function randomNegativeEvenNumber() {
+    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    if(randomNumber % 2 === 0) {
+        return randomNumber;
+    }
+
+    return randomNegativeEvenNumber();
+}
+
+// this function generates a random number that is both negative and odd.
+function randomNegativeOddNumber() {
+    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    if(randomNumber % 2 === 0) {
+        return randomNegativeOddNumber();
+    }
+
+    return randomNumber;
+}
+
+// The next 4 lines create variables that hold these generated random numbers
+var positiveEvenNumber = randomPositiveEvenNumber()
+var positiveOddNumber = randomPositiveOddNumber();
+var negativeEvenNumber = randomNegativeEvenNumber();
+var negativeOddNumber = randomNegativeOddNumber();
+
+
+// Exercise 11
+// Write a function definition for a function named addOne that takes in a number and returns that number plus one
+
+function addOne(num){
+    return parseInt(num+1);
+}
+console.log(addOne(1));
+
+
+// Exercise 12
+// Write a function definition named isPositive that takes in a number and returns true or false if that number is positive.
+// Think about the definition of a number that is positive.
+// Is 5 positive? Is 0.25 positive? Is 0.00001 positive? Is -0.001 positive?
+// Is zero itself positive? What about infinity? What about negative infinity?
+// See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators for guidance with JS comparison operators.
+
+function isPositive(x){
+    return x>0;
+}
+console.log(isPositive(5));
+
+
+// Exercise 13
+// Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
+
+function isNegative(x){
+    return x<0;
+}
+console.log(isNegative(-4));
+
+
+// Exercise 14
+// Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
+
+function isOdd(x){
+    return x % 2 === 1;
+}
+console.log(isOdd(3));
+
+
+// Exercise 15
+// Write a function definition named isEven that takes in a number and returns true or false if that number is even.
+
+function isEven(x){
+    return x %2 === 0;
+}
+console.log(isEven(4));
+
+
+// Exercise 16
+// Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
+
+function identity(input){
+    return input;
+}
+console.log(identity('hello'));
+
+
+// Exercise 17
+// Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
+
+function isPositiveOdd(x){
+    return x>0 && x%2===1;
+}
+console.log(isPositiveOdd(5));
+
+
+// Exercise 18
+// Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
+
+function isPositiveEven(x){
+    return x>0 && x%2 === 0;
+}
+console.log(isPositiveEven(8));
+
+
+// Exercise 19
+// Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
+
+function isNegativeOdd(x){
+    return x<0 && x%2 === -1; // or x<0 && x%2 !== 0
+}
+console.log(isNegativeOdd(-1));
+
+
+// Exercise 20
+// Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
+function isNegativeEven (x){
+    return x<0 && x%2 === 0;
+}
+console.log(isNegativeEven(-6))
+

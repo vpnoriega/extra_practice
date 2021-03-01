@@ -377,3 +377,56 @@ function areaOfRectangle(x,y){
     return x*y;
 }
 console.log(areaOfRectangle(5,4))
+
+
+// Exercise 41
+// Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
+
+function areaOfCircle(radius){
+    return Math.PI * Math.pow(radius,2)
+}
+console.log(areaOfCircle(5))
+
+
+// Exercise 42
+// Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
+
+function circumference (radius){
+    return Math.PI * 2 * radius;
+}
+console.log(circumference(4))
+
+// Exercise 43
+// Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
+
+function isVowel (v){
+    var noCase = v.toLowerCase();
+    return noCase === 'a' || noCase === 'e' ||noCase === 'i' ||noCase === 'o' ||noCase === 'u';
+}
+console.log(isVowel("A"))
+
+
+// Exercise 44
+// Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
+
+function hasVowels (string){
+    return string.indexOf()
+}
+
+// Exercise 45
+// Write a function definition named countVowels that takes in value and returns the count of the number of vowels in a sequence.
+
+// Exercise 46
+// Write a function definition named removeVowels that takes in string and returns the string without any vowels
+
+// Exercise 47
+// Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
+
+// Exercise 48
+// Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
+
+// Exercise 49
+// Write a function definition named startsAndEndsWithVowel that takes in string and returns true if the string starts and ends with a vowel
+
+// Exercise 50
+// Write a function definition named first that takes in sequence and returns the first value of that sequence.

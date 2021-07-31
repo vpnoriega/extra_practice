@@ -1,3 +1,5 @@
+/** CodeCamp Examples**/
+
 // In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 
 //TODO: Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
@@ -59,4 +61,19 @@ function testLogicalOr(val) {
 }
 
 console.log(testLogicalOr(15));
-console.log(testLogicalOr(35))
+console.log(testLogicalOr(35));
+
+//TODO: Combine the if statements into a single if/else statement
+
+function testElse(val) {
+    var result = "";
+    if (val > 5) {
+        result = "Bigger than 5"
+    } else {
+        result = "5 or Smaller";
+    }
+    return result;
+}
+
+console.log(testElse(4));
+console.log(testElse(8));

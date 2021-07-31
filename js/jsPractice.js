@@ -21,7 +21,7 @@ console.log(nextInLine(testArr, 7));
 console.log("After: " + JSON.stringify(testArr));
 
 
-/** ***** **/
+
 //TODO: Create an if statement inside the function to return Yes, that was true if the parameter wasThatTrue is true and return No, that was false otherwise.
 
 function trueOrFalse(wasThatTrue) {
@@ -34,7 +34,7 @@ function trueOrFalse(wasThatTrue) {
 console.log(trueOrFalse(true));
 console.log(trueOrFalse(false));
 
-/** ***** **/
+
 //TODO: Replace the two if statements with one statement, using the && operator, which will return the string Yes if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return the string No.
 
 function testLogicalAnd(val) {
@@ -46,3 +46,17 @@ function testLogicalAnd(val) {
 
 console.log(testLogicalAnd(30));
 console.log(testLogicalAnd(10));
+
+
+//TODO:Combine the two if statements into one statement which returns the string Outside if val is not between 10 and 20, inclusive. Otherwise, return the string Inside.
+
+function testLogicalOr(val) {
+    if (val > 20 || val < 10) {
+        return "Outside";
+    }
+
+    return "Inside";
+}
+
+console.log(testLogicalOr(15));
+console.log(testLogicalOr(35))

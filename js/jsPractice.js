@@ -141,8 +141,37 @@ function caseInSwitch(val) {
     }
     return answer;
 }
-
 console.log(caseInSwitch(1));
 console.log(caseInSwitch(2));
 console.log(caseInSwitch(3));
 console.log(caseInSwitch(4));
+
+//TODO: Write a switch statement to set answer for the following conditions:
+// a - apple
+// b - bird
+// c - cat
+// default - stuff
+
+function switchOfStuff(val) {
+    var answer = "";
+    switch(val){
+        case "a":
+            return "apple";
+            break;
+        case "b":
+            return "bird";
+            break;
+        case "c":
+            return "cat";
+            break;
+        default:
+            return "stuff"
+    }
+
+    return answer;
+}
+
+console.log(switchOfStuff(1));
+console.log(switchOfStuff("a"));
+console.log(switchOfStuff("b"));
+console.log(switchOfStuff("c"));

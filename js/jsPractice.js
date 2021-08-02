@@ -116,3 +116,33 @@ console.log(golfScore(5, 4));
 console.log(golfScore(1));
 console.log(golfScore(2, 4));
 console.log(golfScore(10, 5));
+
+//TODO: Write a switch statement which tests val and sets answer for the following conditions:
+//     1 - alpha
+//     2 - beta
+//     3 - gamma
+//     4 - delta
+
+function caseInSwitch(val) {
+    var answer = "";
+    switch(val){
+        case 1:
+            return("alpha");
+            break;
+        case 2:
+            return("beta");
+            break;
+        case 3:
+            return("gamma");
+            break;
+        case 4:
+            return("delta");
+            break;
+    }
+    return answer;
+}
+
+console.log(caseInSwitch(1));
+console.log(caseInSwitch(2));
+console.log(caseInSwitch(3));
+console.log(caseInSwitch(4));

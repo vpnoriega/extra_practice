@@ -51,5 +51,19 @@ function multiplyAll(arr) {
     }
     return product;
 }
-
 console.log(multiplyAll([[1,2],[3,4],[5,6,7]]));
+
+
+
+function sum(arr, n) {
+    if(n <= 0) {
+        return 0;
+    } else {
+        return sum(arr, n - 1) + arr[n - 1];
+    }
+}
+
+console.log(sum([5,5,4],3)); //14
+console.log(sum([10,5,6], 2)) //15
+
+//explanation: The if statement checks to see if sum is evaluating the base case, n <= 0, or not. If it is, then sum returns the answer, 0 - the sum of elements from 0 to 0 inclusive. Otherwise, it recurses by evaluating a simpler function call, sum(arr, n - 1). Once that returns it adds a single array element, arr[n - 1], to it and returns that sum.

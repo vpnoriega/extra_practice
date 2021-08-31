@@ -40,45 +40,75 @@
 
 /** Transition Function above into a Class component**/
 
-// define a constructor inside the class that takes in 4 arguments to create the blueprint for the book
- class Book {
-     constructor(title, author, ISBN, numCopies) {
-         this.title = title;
-         this.author = author;
-         this.ISBN = ISBN;
-         this.numCopies = numCopies;
-     }
+// // define a constructor inside the class that takes in 4 arguments to create the blueprint for the book
+//  class Book {
+//      constructor(title, author, ISBN, numCopies) {
+//          this.title = title;
+//          this.author = author;
+//          this.ISBN = ISBN;
+//          this.numCopies = numCopies;
+//      }
+//
+//      // Create get availability method directly in the class. All book related code lives inside the book  class (example of Encapsulation)
+//      getAvailability(){
+//          if(this.numCopies === 0){
+//              return "Out of Stock";
+//          } else if (this.numCopies < 10){
+//              return "Low Stock";
+//          }
+//          return "In stock"
+//      }
+//
+//     //getter function to retrieve a book's availability allows us to write "book.availability" instead of calling book.getAvailability
+//     get availability(){
+//         return this.getAvailability();
+//     }
+//
+//      // include the sell and restock functions directly within the class
+//      sell(numCopiesSold = 1){
+//          this.numCopies -= numCopiesSold;
+//      }
+//      restock(numCopiesRestocked = 5){
+//          this.numCopies += numCopiesRestocked;
+//      }
+//  }
+//
+//  // Create a new book to test the restock and sell functions
+//  const HUNGERGAMES = new Book ("Hunger Games", "Suzanne Collins", 123989, 5);
+//  console.log(HUNGERGAMES.availability); // Low Stock - because numCopies < 10 (5)
+//
+//  HUNGERGAMES.restock(12);
+//  console.log(HUNGERGAMES.availability); // In stock - because numCopies > 10 (12 + 5 = 17)
+//
+//  HUNGERGAMES.sell(17);
+//  console.log(HUNGERGAMES.availability);// Out of Stock - because numCopies equals 0 (17 - 17)
 
-     // Create get availability method directly in the class. All book related code lives inside the book  class (example of Encapsulation)
-     getAvailability(){
-         if(this.numCopies === 0){
-             return "Out of Stock";
-         } else if (this.numCopies < 10){
-             return "Low Stock";
-         }
-         return "In stock"
-     }
+/** Create a movie object that takes in 5 args of title, director, genre, release year, rating. Movie prototype should have a function called get overview which logs the following overview for each film: "<movie>, a <genre> film directed by <director> was released in <releaseYear>. It received a rating of <rating>." */
 
-    //getter function to retrieve a book's availability allows us to write "book.availability" instead of calling book.getAvailability
-    get availability(){
-        return this.getAvailability();
-    }
+// constructor function syntax:
+function Movie(title, director, genre, releaseYear, rating){
+    this.title = title;
+    this.director = director;
+    this.genre = genre;
+    this.releaseYear = releaseYear;
+    this.rating = rating;
+}
 
-     // include the sell and restock functions directly within the class
-     sell(numCopiesSold = 1){
-         this.numCopies -= numCopiesSold;
-     }
-     restock(numCopiesRestocked = 5){
-         this.numCopies += numCopiesRestocked;
-     }
- }
+// To add a function to the prototype, use the constructor name followed by the prototype keyword. Then, add the name of the function you want to create
+Movie.prototype.getOverview = function(){
+    return `${this.title}, a ${this.genre} film directed by ${this.director} was released in ${this.releaseYear}. It received a rating of ${this.rating}.`;
+}
 
- // Create a new book to test the restock and sell functions
- const HUNGERGAMES = new Book ("Hunger Games", "Suzanne Collins", 123989, 5);
- console.log(HUNGERGAMES.availability); // Low Stock - because numCopies < 10 (5)
+const Spiderman = new Movie("Spiderman", "Sam Raimi", "Action", 2002, 87);
+const Batman = new Movie(
+    "The Dark Knight",
+    "Christopher Nolan",
+    "Action",
+    2008,
+    83
+);
 
- HUNGERGAMES.restock(12);
- console.log(HUNGERGAMES.availability); // In stock - because numCopies > 10 (12 + 5 = 17)
+console.log(Spiderman); //Movie properties
+console.log(Spiderman.getOverview()); // Spiderman, a Action film directed by Sam Raimi was released in 2002. It received a rating of 87.
+console.log(Batman.getOverview()); // The Dark Knight, a Action film directed by Christopher Nolan was released in 2008. It received a rating of 83.
 
- HUNGERGAMES.sell(17);
- console.log(HUNGERGAMES.availability);// Out of Stock - because numCopies equals 0 (17 - 17)

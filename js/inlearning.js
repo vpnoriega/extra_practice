@@ -37,8 +37,7 @@
 // HUNGERGAMES.sell(17);
 // console.log(HUNGERGAMES.getAvailability());// Out of Stock - because numCopies equals 0 (17 - 17)
 
-
-/** Transition Function above into a Class component**/
+/** Transition Book Function above into a Class component**/
 
 // // define a constructor inside the class that takes in 4 arguments to create the blueprint for the book
 //  class Book {
@@ -83,22 +82,53 @@
 //  HUNGERGAMES.sell(17);
 //  console.log(HUNGERGAMES.availability);// Out of Stock - because numCopies equals 0 (17 - 17)
 
+
 /** Create a movie object that takes in 5 args of title, director, genre, release year, rating. Movie prototype should have a function called get overview which logs the following overview for each film: "<movie>, a <genre> film directed by <director> was released in <releaseYear>. It received a rating of <rating>." */
 
 // constructor function syntax:
-function Movie(title, director, genre, releaseYear, rating){
-    this.title = title;
-    this.director = director;
-    this.genre = genre;
-    this.releaseYear = releaseYear;
-    this.rating = rating;
+// function Movie(title, director, genre, releaseYear, rating){
+//     this.title = title;
+//     this.director = director;
+//     this.genre = genre;
+//     this.releaseYear = releaseYear;
+//     this.rating = rating;
+// }
+//
+// // To add a function to the prototype, use the constructor name followed by the prototype keyword. Then, add the name of the function you want to create
+// Movie.prototype.getOverview = function(){
+//     return `${this.title}, a ${this.genre} film directed by ${this.director} was released in ${this.releaseYear}. It received a rating of ${this.rating}.`;
+// }
+
+// const Spiderman = new Movie("Spiderman", "Sam Raimi", "Action", 2002, 87);
+// const Batman = new Movie(
+//     "The Dark Knight",
+//     "Christopher Nolan",
+//     "Action",
+//     2008,
+//     83
+// );
+//
+// console.log(Spiderman); //Movie properties
+// console.log(Spiderman.getOverview()); // Spiderman, a Action film directed by Sam Raimi was released in 2002. It received a rating of 87.
+// console.log(Batman.getOverview()); // The Dark Knight, a Action film directed by Christopher Nolan was released in 2008. It received a rating of 83.
+
+/** Movie overview Class component */
+
+class Movie {
+    constructor(title, director, genre, releaseYear, rating) {
+        this.title = title;
+        this.director = director;
+        this.genre = genre;
+        this.releaseYear = releaseYear;
+        this.rating = rating;
+    }
+
+    getOverview (){
+        return `${this.title}, a ${this.genre} film directed by ${this.director} was released in ${this.releaseYear}. It received a rating of ${this.rating}.`;
+    }
 }
 
-// To add a function to the prototype, use the constructor name followed by the prototype keyword. Then, add the name of the function you want to create
-Movie.prototype.getOverview = function(){
-    return `${this.title}, a ${this.genre} film directed by ${this.director} was released in ${this.releaseYear}. It received a rating of ${this.rating}.`;
-}
-
+// test the Movie class
 const Spiderman = new Movie("Spiderman", "Sam Raimi", "Action", 2002, 87);
 const Batman = new Movie(
     "The Dark Knight",
@@ -112,3 +142,4 @@ console.log(Spiderman); //Movie properties
 console.log(Spiderman.getOverview()); // Spiderman, a Action film directed by Sam Raimi was released in 2002. It received a rating of 87.
 console.log(Batman.getOverview()); // The Dark Knight, a Action film directed by Christopher Nolan was released in 2008. It received a rating of 83.
 
+// While using constructor functions is just as valid as using class notation, class notation encapsulates all of the functionality in one place so it's simpler and easier to read.
